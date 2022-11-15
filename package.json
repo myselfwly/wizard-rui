@@ -1,11 +1,47 @@
 {
-  "name": "wizard-rui",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+	"name": "wizard-rui",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --config ./webpack/webpack.dev.js",
+		"build": "webpack --config ./webpack/webpack.prod.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/cli": "^7.19.3",
+		"@babel/core": "^7.20.2",
+		"@babel/plugin-proposal-decorators": "^7.20.2",
+		"@babel/plugin-transform-runtime": "^7.19.6",
+		"@babel/preset-env": "^7.20.2",
+		"@babel/preset-react": "^7.18.6",
+		"@babel/preset-typescript": "^7.18.6",
+		"@types/react": "^18.0.25",
+		"@types/react-dom": "^18.0.8",
+		"@typescript-eslint/eslint-plugin": "^5.42.1",
+		"@typescript-eslint/parser": "^5.42.1",
+		"babel-loader": "^9.1.0",
+		"babel-plugin-dynamic-import-node": "^2.3.3",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"clean-webpack-plugin": "^4.0.0",
+		"core-js": "^3.26.1",
+		"css-loader": "^6.7.1",
+		"file-loader": "^6.2.0",
+		"html-webpack-plugin": "^5.5.0",
+		"less-loader": "^11.1.0",
+		"mini-css-extract-plugin": "^2.6.1",
+		"prettier": "^2.7.1",
+		"style-loader": "^3.3.1",
+		"typescript": "^4.8.4",
+		"webpack": "^5.74.0",
+		"webpack-cli": "^4.10.0",
+		"webpack-dev-server": "^4.11.1",
+		"webpack-merge": "^5.8.0"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
 }

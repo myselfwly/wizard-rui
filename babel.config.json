@@ -1,0 +1,28 @@
+{
+	"comments": false,
+	"presets": [
+		[
+			"@babel/preset-env", //语法转化
+			{
+				"targets": {
+					"browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+				},
+				"useBuiltIns": "usage",
+				"corejs": 3,
+				"loose": true
+			}
+		],
+		"@babel/preset-react",
+		"@babel/preset-typescript"
+	],
+	"plugins": [
+		"dynamic-import-node",
+		"@babel/plugin-transform-runtime",
+		[
+			"@babel/plugin-proposal-decorators",
+			{
+				"legacy": true
+			}
+		]
+	]
+}
