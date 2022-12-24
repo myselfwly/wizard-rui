@@ -1,5 +1,6 @@
 {
 	"comments": false,
+	"sourceMaps": true,
 	"presets": [
 		[
 			"@babel/preset-env", //语法转化

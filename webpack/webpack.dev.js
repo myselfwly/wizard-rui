@@ -4,7 +4,7 @@ const { merge } = require('webpack-merge');
 const path = require('path');
 const resolve = (dir) => path.resolve(__dirname, dir);
 
-module.exports = merge(base, {
+module.exports = merge(base('development'), {
 	mode: 'development', //开发环境webpack内置优化
 	devtool: 'inline-source-map', //控制台调试代码
 	devServer: {
@@ -19,33 +19,11 @@ module.exports = merge(base, {
 				arguments: ['--incognito', '--new-window'] //无痕，新的窗口
 			}
 		},
-		port: 8081, //监听端口
+		port: 8080, //监听端口
 		proxy: {} //代理配置
 	},
 	optimization: {
 		//优化模式
 		minimize: false
-	},
-	/**
-	 * 路径别名
-	 */
-	resolve: {
-		alias: {
-			// "@": ["../src"],
-			'@': resolve('../src/'),
-			src: resolve('../src/'),
-			components: resolve('../src/components'),
-			config: resolve('../src/config'),
-			hook: resolve('../src/hook'),
-			apis: resolve('../src/apis'),
-			router: resolve('../src/router'),
-			store: resolve('../src/store'),
-			theme: resolve('../src/theme'),
-			util: resolve('../src/util'),
-			i18n: resolve('../src/i18n'),
-			assets: resolve('../src/assets'),
-			views: resolve('../src/views')
-		},
-		extensions: ['.tsx', '.ts', '.wasm', '.mjs', '.js', '.json']
 	}
 });

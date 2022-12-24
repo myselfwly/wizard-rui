@@ -19,6 +19,6 @@
 		"esModuleInterop": true, //ES 模块互操作性
 		"experimentalDecorators": true //ES7类修饰器允许
 	},
-	"exclude": ["node_modules", "config/*"], //忽略文件
+	"exclude": ["node_modules", "webpack/*"], //忽略文件
 	"include": ["src/**/*"] //包含文件
 }
