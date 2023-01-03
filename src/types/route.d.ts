@@ -1,4 +1,4 @@
-import { MutexType } from './utils';
+import { MutexType } from "./utils";
 
 declare namespace RouteType {
 	export type Item = MutexType<

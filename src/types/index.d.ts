@@ -1,3 +1,3 @@
-import { RouteType } from './route';
+import { RouteType } from "./route";
 
 export { RouteType };

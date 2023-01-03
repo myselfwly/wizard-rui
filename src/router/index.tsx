@@ -1,8 +1,8 @@
-import React from 'react';
-import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { routeMap } from './routerMap';
-import LayOut from '../business/LayOut';
-import { RouteType } from 'src/types';
+import React from "react";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
+import { routeMap } from "./routerMap";
+import LayOut from "../business/LayOut";
+import { RouteType } from "src/types";
 /**
  *
  * @param routes 元路由
@@ -15,7 +15,8 @@ const renderRoutes = (routes: RouteType.Map) => {
 			<Route
 				path={path}
 				element={redirect ? <Navigate to={redirect} replace /> : element}
-				key={path + index}>
+				key={path + index}
+			>
 				{children && children?.length !== 0 ? renderRoutes(children) : null}
 			</Route>
 		);
@@ -30,8 +31,8 @@ const RootRoute = () => {
 	return (
 		<HashRouter>
 			<Routes>
-				<Route path='' element={<Navigate to={'layout'} replace />}></Route>
-				<Route path={'layout'} element={<LayOut />}>
+				<Route path="" element={<Navigate to={"layout"} replace />}></Route>
+				<Route path={"layout"} element={<LayOut />}>
 					{RouteDom}
 				</Route>
 				{RouteDom}

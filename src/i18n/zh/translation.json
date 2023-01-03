@@ -1,0 +1,12 @@
+{
+  "componentViews": {
+    "button": {
+      "button": "按钮",
+      "default": "次按钮",
+      "dashed": "虚线按钮",
+      "link": "链接按钮",
+      "text": "文本按钮",
+      "primary": "主按钮"
+    }
+  }
+}

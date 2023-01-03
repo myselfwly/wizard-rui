@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { RouteType } from 'src/types';
-import './index.less';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { RouteType } from "src/types";
+import "./index.less";
 /**
  * 导航按钮
  */
@@ -33,8 +33,9 @@ const NavItem: React.FC<NavItemPropsType> = (props) => {
 					return (
 						<NavLink
 							to={`${route.path}/${item.path}`}
-							className={({ isActive }) => (isActive ? 'nav-item-nav active' : 'nav-item-nav')}
-							key={'level2' + item.path}>
+							className={({ isActive }) => (isActive ? "nav-item-nav active" : "nav-item-nav")}
+							key={"level2" + item.path}
+						>
 							{item.name}
 						</NavLink>
 					);
@@ -46,21 +47,23 @@ const NavItem: React.FC<NavItemPropsType> = (props) => {
 	};
 	return (
 		<div
-			className='nav-item nav-level1'
+			className="nav-item nav-level1"
 			onMouseOver={() => {
 				handleHover(true);
 			}}
 			onMouseLeave={() => {
 				handleHover(false);
-			}}>
+			}}
+		>
 			<NavLink
 				to={props.route.path}
-				className={({ isActive }) => (isActive ? 'nav-item-nav active' : 'nav-item-nav')}>
+				className={({ isActive }) => (isActive ? "nav-item-nav active" : "nav-item-nav")}
+			>
 				{props.route.name}
 			</NavLink>
 
 			{isHover && (
-				<div className='nav-item nav-level2'>
+				<div className="nav-item nav-level2">
 					{props.route?.children && createChildrenDom(props.route)}
 				</div>
 			)}

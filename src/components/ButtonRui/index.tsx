@@ -1,18 +1,15 @@
-import React, { FC } from 'react';
-import { Button } from 'antd';
-import { ButtonProps } from 'antd';
-import { RuiCommon } from 'src/types/utils';
-import { ruiCommonKeys } from '../exports';
+import React, { FC } from "react";
+import { Button } from "antd";
+import { ButtonProps } from "antd";
+import { RuiType } from "src/types/components";
+import { cssTools } from "src/utils/cssTools";
+import { ButtonRuiProps } from "src/types/components/button";
+//button封装
 
-type ButtonRuiExtend = {} & RuiCommon;
-
-export declare type ButtonRuiProps = ButtonProps & ButtonRuiExtend;
 export const ButtonRui: FC<ButtonRuiProps> = (props) => {
-	const ruiProps = {};
-	const originProps = {};
-	for (const key in props) {
-		if (ruiCommonKeys.find((item) => item === key)) {
-		}
-	}
+	const ruiProps = { ...props };
+	const originProps: ButtonProps = { ...ruiProps };
+	const { classNameParser } = cssTools;
+	originProps.className = classNameParser(RuiType.Button, originProps.className);
 	return <Button {...originProps}>{props.children}</Button>;
 };

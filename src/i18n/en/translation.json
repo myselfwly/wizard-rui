@@ -1,0 +1,12 @@
+{
+  "componentViews": {
+    "button": {
+      "button": "Button",
+      "default": "Default Button",
+      "dashed": "dashed Button",
+      "link": "Link Button",
+      "text": "Text Button",
+      "primary": "Primary Button"
+    }
+  }
+}

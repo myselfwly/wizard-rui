@@ -44,9 +44,13 @@
 	"dependencies": {
 		"@ant-design/icons": "^4.7.0",
 		"antd": "^4.24.2",
+		"dayjs": "^1.11.7",
+		"i18next": "^22.4.6",
+		"i18next-browser-languagedetector": "^7.0.1",
 		"md5": "^2.3.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
+		"react-i18next": "^12.1.1",
 		"react-router-dom": "^6.4.3"
 	}
 }
